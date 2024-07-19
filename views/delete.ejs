@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs'); -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete User</title>
+</head>
+
+<body>
+    <h1 class="newh1">Delete a Family Member</h1>
+    <form class="newform" action="/deleteuser" method="post">
+        <h3 class="newformp">Select Family Member</h3>
+        <% users.forEach(function(user) { %>
+          <input type="radio" name="user" value="<%= user.id %>" id="<%= user.id %>">
+          <label for="<%= user.id %>"><%= user.name %></label><br>
+        <% }); %>
+      
+      <button type="submit">Delete</button>
+    </form>
+</body>
+
+</html>
+<%- include('partials/footer.ejs'); -%>

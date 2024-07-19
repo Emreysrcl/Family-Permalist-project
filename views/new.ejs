@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs'); -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New User</title>
+
+</head>
+
+<body>
+  <h1 class="newh1">Add a Family Member</h1>
+  <form class="newform" action="/new" method="post">
+    <h3 class="newformp">What's your name?</h3>
+    <input type="text" name="name">
+    <button type="submit">Add</button>
+  </form>
+</body>
+
+</html>
+<%- include('partials/footer.ejs'); -%>
